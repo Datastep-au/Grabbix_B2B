@@ -1,0 +1,265 @@
+/* Placeholder styles for missing images and content */
+
+.placeholder-image {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px dashed #dee2e6;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #6c757d;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 75% 75%, rgba(34, 197, 94, 0.05) 0%, transparent 25%);
+    pointer-events: none;
+}
+
+.placeholder-image h3 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.placeholder-image p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.placeholder-image small {
+    font-size: 0.8rem;
+    color: #adb5bd;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+/* Software dashboard placeholder */
+.software-dashboard-placeholder {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #e2e8f0;
+    border-color: var(--primary-green);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.software-dashboard-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 40px;
+    background-color: rgba(34, 197, 94, 0.2);
+    border-radius: 8px;
+}
+
+.software-dashboard-placeholder::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    height: 200px;
+    background:
+        linear-gradient(90deg, transparent 0%, rgba(34, 197, 94, 0.1) 50%, transparent 100%),
+        linear-gradient(0deg, transparent 0%, rgba(34, 197, 94, 0.05) 30%, transparent 70%);
+    border-radius: 8px;
+}
+
+.software-dashboard-placeholder h3 {
+    color: #f1f5f9;
+    position: relative;
+    z-index: 2;
+}
+
+.software-dashboard-placeholder p {
+    color: #cbd5e1;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero image placeholder */
+.hero-placeholder {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    border-color: #16a34a;
+    min-height: 300px;
+    position: relative;
+}
+
+.hero-placeholder::before {
+    content: '🏢';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.hero-placeholder h3,
+.hero-placeholder p {
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/* Lifestyle image placeholders */
+.office-placeholder {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.gym-placeholder {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.apartment-placeholder {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+}
+
+/* Product close-up placeholders */
+.closeup-placeholder {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    min-height: 250px;
+}
+
+.closeup-placeholder::before {
+    content: '📷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0.3;
+}
+
+/* Video placeholder */
+.video-placeholder {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #e5e7eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 315px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-placeholder::before {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: var(--primary-green);
+    opacity: 0.7;
+}
+
+.video-placeholder h3,
+.video-placeholder p {
+    color: #f9fafb;
+    position: relative;
+    z-index: 1;
+}
+
+/* Trust badge placeholders */
+.trust-badge-placeholder {
+    background-color: var(--light-gray);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    border: 1px dashed var(--border-gray);
+}
+
+/* Image optimization and loading states */
+.image-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.image-error {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-color: #fca5a5;
+}
+
+.image-error::before {
+    content: '⚠';
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .placeholder-image {
+        padding: 2rem 1rem;
+    }
+
+    .placeholder-image h3 {
+        font-size: 1.2rem;
+    }
+
+    .software-dashboard-placeholder {
+        min-height: 300px;
+    }
+
+    .hero-placeholder {
+        min-height: 250px;
+    }
+
+    .closeup-placeholder {
+        min-height: 200px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .placeholder-image {
+        border: 2px solid #000;
+        background: white;
+        color: #000;
+    }
+
+    .placeholder-image::before {
+        display: none;
+    }
+}

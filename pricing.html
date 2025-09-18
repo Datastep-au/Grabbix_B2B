@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & ROI Calculator | Grabbix Smart Vending Machines</title>
+    <meta name="description" content="Transparent pricing for Grabbix smart vending machines. Use our ROI calculator to see how fast your investment pays for itself.">
+    <link rel="icon" type="image/x-icon" href="images/Logo/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/placeholders.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M4MVFCG6');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4MVFCG6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/Logo/Grabbix Logo small.png" alt="Grabbix Logo" class="logo">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Grabbix Smart Store</a></li>
+                    <li><a href="why-now.html">Why Now</a></li>
+                    <li><a href="pricing.html" class="active">Pricing</a></li>
+                </ul>
+                <a href="book-demo.html" class="btn btn-primary">Book a Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Pricing & ROI Calculator</h1>
+                <p class="page-subtitle">Transparent pricing with a calculator tool so you can see costs and payback in one place.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <div class="container">
+                <h2>Simple, Transparent Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Buy Outright</h3>
+                        <div class="price">$8,999 AUD</div>
+                        <p class="price-note">per unit (excl. freight)</p>
+                        <ul class="pricing-features">
+                            <li>Own your machine outright</li>
+                            <li>No monthly payments</li>
+                            <li>Maximum profit potential</li>
+                            <li>Full ownership benefits</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <h3>Lease Option</h3>
+                        <div class="price">$500 AUD</div>
+                        <p class="price-note">per month for 24 months</p>
+                        <div class="price-details">
+                            <p>Then buy out for <strong>$1,000</strong></p>
+                            <p>(excl. freight)</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Lower upfront investment</li>
+                            <li>Spread costs over time</li>
+                            <li>Cash flow friendly</li>
+                            <li>Own after 24 months</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>Software</h3>
+                        <div class="price">$30 AUD</div>
+                        <p class="price-note">per month per unit</p>
+                        <div class="price-details">
+                            <p><strong>+ $0.10</strong> per transaction</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>AI vision technology</li>
+                            <li>Real-time monitoring</li>
+                            <li>Remote management</li>
+                            <li>24/7 support</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="pricing-note">*All prices exclude GST and freight</p>
+            </div>
+        </section>
+
+        <!-- ROI Calculator Section -->
+        <section class="roi-calculator">
+            <div class="container">
+                <div class="calculator-header">
+                    <h2>See how fast your store pays for itself</h2>
+                    <p>Enter your foot traffic and basket size to estimate revenue and payback.</p>
+                </div>
+
+                <div class="calculator-container">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="footTraffic">Daily Foot Traffic</label>
+                            <input type="range" id="footTraffic" min="20" max="500" value="120">
+                            <div class="slider-value" id="footTrafficValue">120</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="conversionRate">Expected Conversion Rate (%)</label>
+                            <input type="range" id="conversionRate" min="1" max="15" value="6">
+                            <div class="slider-value" id="conversionRateValue">6%</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="basketValue">Average Basket Value (AUD)</label>
+                            <input type="range" id="basketValue" min="1" max="15" value="6">
+                            <div class="slider-value" id="basketValueValue">$6</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="profitMargin">Profit Margin (%)</label>
+                            <input type="range" id="profitMargin" min="1" max="200" value="60">
+                            <div class="slider-value" id="profitMarginValue">60%</div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-results">
+                        <div class="result-card">
+                            <h3>Monthly Revenue</h3>
+                            <div class="result-value" id="monthlyRevenue">$1,296</div>
+                        </div>
+
+                        <div class="result-card">
+                            <h3>Monthly Gross Profit</h3>
+                            <div class="result-value" id="grossProfit">$777</div>
+                        </div>
+
+                        <div class="result-card highlighted">
+                            <h3>Payback Period</h3>
+                            <div class="result-value" id="paybackPeriod">13 months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <h2>Get Started Today</h2>
+                        <p>Don't Miss This Opportunity. Book a demo to see how you can start earning with Grabbix.</p>
+                        <a href="book-demo.html" class="btn btn-primary btn-large">Get Started Today</a>
+                    </div>
+                    <div class="cta-image">
+                        <img src="images/Images/Empty Machine.png" alt="Grabbix Machine" class="cta-machine">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="index.html">Grabbix Smart Store</a></li>
+                            <li><a href="why-now.html">Why Now</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">Team</a></li>
+                            <li><a href="book-demo.html">Contact Sales</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-cta">
+                    <h4>Want to learn more?</h4>
+                    <p>Connect with our sales team to learn more about how Grabbix Smart Stores can grow your business.</p>
+                    <a href="book-demo.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/Logo/Grabbix Logo small.png" alt="Grabbix" class="footer-logo">
+                <p>&copy; 2025 Grabbix</p>
+                <div class="legal-links">
+                    <a href="terms.html">Terms of Use</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/roi-calculator.js"></script>
+    <script src="js/gtm-setup.js"></script>
+</body>
+</html>
