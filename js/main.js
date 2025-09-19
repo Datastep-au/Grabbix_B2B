@@ -27,22 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            header.style.transform = 'translateY(0)';
-        }
-        lastScrollTop = scrollTop;
-    });
+    // Header is now sticky and always visible - no scroll hiding effect needed
 
     // Intersection Observer for fade-in animations
     const observerOptions = {
@@ -233,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .nav-toggle span {
             width: 25px;
             height: 3px;
-            background-color: var(--charcoal);
+            background-color: var(--white);
             margin: 3px 0;
             transition: 0.3s;
         }
@@ -248,10 +233,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: white;
+                background-color: var(--charcoal);
                 flex-direction: column;
                 padding: 2rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
                 transform: translateY(-100%);
                 opacity: 0;
                 visibility: hidden;
