@@ -211,12 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preset scenarios
     function setPresetScenario(scenario) {
         const presets = {
-            conservative: {
-                footTraffic: 80,
-                conversionRate: 4,
-                basketValue: 5,
-                profitMargin: 50
-            },
             realistic: {
                 footTraffic: 120,
                 conversionRate: 6,
@@ -251,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
         presetContainer.innerHTML = `
             <h4>Try these scenarios:</h4>
             <div class="preset-buttons">
-                <button class="btn btn-secondary btn-small" onclick="roiCalculator.setPreset('conservative')">Conservative</button>
                 <button class="btn btn-secondary btn-small" onclick="roiCalculator.setPreset('realistic')">Realistic</button>
                 <button class="btn btn-secondary btn-small" onclick="roiCalculator.setPreset('optimistic')">Optimistic</button>
             </div>

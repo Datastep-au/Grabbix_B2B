@@ -84,9 +84,16 @@ section {
 .header {
     background-color: var(--charcoal);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+}
+
+/* Add padding to body to compensate for fixed header */
+body {
+    padding-top: 80px;
 }
 
 .nav {
@@ -790,6 +797,108 @@ section {
     margin-top: 1rem;
 }
 
+/* Pricing Tabs */
+.pricing-tabs {
+    margin-bottom: 2rem;
+}
+
+.tab-buttons {
+    display: flex;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: transparent;
+    color: var(--charcoal);
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: var(--white);
+    color: var(--primary-green);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.price-display {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.price-note {
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    font-weight: 500;
+}
+
+/* Platform Costs */
+.platform-costs {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.platform-costs h4 {
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.cost-item:last-of-type {
+    border-bottom: none;
+}
+
+.cost-label {
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.cost-value {
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.fine-print {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
 .product-actions {
     display: flex;
     gap: 1rem;
@@ -805,7 +914,6 @@ section {
     background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
     border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {

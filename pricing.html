@@ -50,40 +50,39 @@
                         <h1 class="product-title">Grabbix Smart AI Vending Machine</h1>
                         <p class="product-subtitle">AI-powered unattended retail solution with vision technology</p>
 
-                        <div class="product-highlights">
-                            <div class="highlight-item">
-                                <span class="highlight-icon">🤖</span>
-                                <span>AI Vision Recognition</span>
+
+                        <div class="pricing-tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="own">Own it</button>
+                                <button class="tab-button" data-tab="lease">Lease it</button>
                             </div>
-                            <div class="highlight-item">
-                                <span class="highlight-icon">💳</span>
-                                <span>Cashless Payments</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-icon">🔒</span>
-                                <span>Smart Security Lock</span>
-                            </div>
-                            <div class="highlight-item">
-                                <span class="highlight-icon">📱</span>
-                                <span>Remote Management</span>
+                            <div class="tab-content">
+                                <div class="tab-panel active" id="own-tab">
+                                    <div class="price-display">
+                                        <span class="price-amount">$8,999 AUD</span>
+                                        <span class="price-note">One-time purchase</span>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" id="lease-tab">
+                                    <div class="price-display">
+                                        <span class="price-amount">$500/month</span>
+                                        <span class="price-note">24 months + $1,000 buyout</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="product-pricing">
-                            <div class="main-price">
-                                <span class="price-label">Starting from</span>
-                                <span class="price-amount">$8,999 AUD</span>
-                                <span class="price-note">or $500/month lease</span>
+                        <div class="platform-costs">
+                            <h4>Platform Costs</h4>
+                            <div class="cost-item">
+                                <span class="cost-label">Software License</span>
+                                <span class="cost-value">$60/month per unit</span>
                             </div>
-                            <div class="pricing-options">
-                                <div class="option">
-                                    <strong>Buy Outright:</strong> $8,999 AUD + $30/month software
-                                </div>
-                                <div class="option">
-                                    <strong>Lease:</strong> $500/month (24mo) + $1,000 buyout + $30/month software
-                                </div>
-                                <p class="fine-print">*Prices exclude GST and freight. Software includes $0.10 per transaction.</p>
+                            <div class="cost-item">
+                                <span class="cost-label">Transaction Fee</span>
+                                <span class="cost-value">$0.10 per transaction</span>
                             </div>
+                            <p class="fine-print">*Prices exclude GST and freight</p>
                         </div>
 
                         <div class="product-actions">
@@ -214,6 +213,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/roi-calculator.js"></script>
+    <script src="js/pricing-tabs.js"></script>
     <script src="js/gtm-setup.js"></script>
 </body>
 </html>
