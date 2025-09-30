@@ -1,0 +1,13 @@
+# Grabbix Smart Vending Machines - robots.txt
+# https://www.grabbix.com.au/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap location
+Sitemap: https://www.grabbix.com.au/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
