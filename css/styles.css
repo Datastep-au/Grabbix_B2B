@@ -1498,6 +1498,27 @@ body {
         visibility: visible;
     }
 
+    .nav-menu li:last-child {
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-menu li:last-child a {
+        display: block;
+        background-color: var(--primary-green);
+        color: var(--white);
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li:last-child a:hover {
+        background-color: var(--primary-green-dark);
+    }
+
     .nav-cta {
         display: none;
     }
