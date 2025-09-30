@@ -15,6 +15,12 @@ body {
     color: #2c2c2c;
     background-color: #ffffff;
     font-size: 16px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Typography */
@@ -513,6 +519,19 @@ body {
     font-style: italic;
     color: var(--charcoal);
     font-size: 1rem;
+}
+
+.software-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.software-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .placeholder-image {
@@ -1421,6 +1440,26 @@ body {
     opacity: 1;
 }
 
+/* Mobile Navigation */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 3px 0;
+    transition: 0.3s;
+    display: block;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
@@ -1429,10 +1468,50 @@ body {
 
     .nav-container {
         padding: 0 1rem;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: flex;
+        margin-left: auto;
     }
 
     .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--charcoal);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu.nav-menu-active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-cta {
         display: none;
+    }
+
+    .nav-toggle.nav-toggle-active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-toggle.nav-toggle-active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.nav-toggle-active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .hero-content {

@@ -5,10 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             navMenu.classList.toggle('nav-menu-active');
             navToggle.classList.toggle('nav-toggle-active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                navMenu.classList.remove('nav-menu-active');
+                navToggle.classList.remove('nav-toggle-active');
+            }
+        });
+
+        // Close menu when clicking a link
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('nav-menu-active');
+                navToggle.classList.remove('nav-toggle-active');
+            });
         });
     }
 
@@ -208,77 +226,9 @@ document.addEventListener('DOMContentLoaded', function() {
             border-color: #dc2626 !important;
         }
 
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .nav-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--white);
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        @media (max-width: 768px) {
-            .nav-toggle {
-                display: flex;
-            }
-
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--charcoal);
-                flex-direction: column;
-                padding: 2rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-
-            .nav-menu-active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .nav-toggle-active span:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-
-            .nav-toggle-active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .nav-toggle-active span:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-        }
     `;
     document.head.appendChild(style);
 
-    // Add mobile navigation toggle HTML
-    if (window.innerWidth <= 768 && !document.querySelector('.nav-toggle')) {
-        const navContainer = document.querySelector('.nav-container');
-        const navToggle = document.createElement('div');
-        navToggle.className = 'nav-toggle';
-        navToggle.innerHTML = '<span></span><span></span><span></span>';
-
-        const navMenu = document.querySelector('.nav-menu');
-        navContainer.insertBefore(navToggle, navMenu);
-
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('nav-menu-active');
-            navToggle.classList.toggle('nav-toggle-active');
-        });
-    }
 
     // Performance optimization: lazy loading for images
     const images = document.querySelectorAll('img');
